@@ -9,7 +9,7 @@ function RedButton({ children }) {
 		<button
 			style={{
 				color: 'white',
-				backgroundColor: 'red'
+				backgroundColor: 'green'
 			}}
 		>
 			{children}
