@@ -3,19 +3,10 @@ import "./styles.css";
 import Whitespaces from "./Whitespaces";
 import Expressionslot from "./Expressionslot";
 import FriendlyGreeting from "./FriendlyGreeting";
+import RedButton from "./RedButton";
+import ContactCard from "./ContactCard";
 
-function RedButton({ children }) {
-	return (
-		<button
-			style={{
-				color: 'white',
-				backgroundColor: 'green'
-			}}
-		>
-			{children}
-		</button>
-	);
-}
+
 
 export default function App() {
 	return (
@@ -25,7 +16,12 @@ export default function App() {
 			<Expressionslot />
 			<FriendlyGreeting name="Praveen" />
 
-			<RedButton>Don't click me</RedButton>
+			<RedButton content="Dont click" />
+			<ul>
+				<ContactCard name="Sunita" job="Electrical Engineer" email="sunita.kumar@acme.co" />
+				<ContactCard name="Raj" job="Computer Engineer" email="sunita.kumar@acme.co" />
+				<ContactCard name="Kumar" job="Mechanical Engineer" email="sunita.kumar@acme.co" />
+			</ul>
 		</div>
 	);
 }
