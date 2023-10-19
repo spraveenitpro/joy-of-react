@@ -7,24 +7,51 @@ import RedButton from "./RedButton";
 import ContactCard from "./ContactCard";
 import MyButton from "./MyButton";
 
-
+const data = [
+	{
+		id: 'sunita-abc123',
+		name: 'Sunita Kumar',
+		job: 'Electrical Engineer',
+		email: 'sunita.kumar@acme.co',
+	},
+	{
+		id: 'henderson-def456',
+		name: 'Henderson G. Sterling II',
+		job: 'Receptionist',
+		email: 'henderson-the-second@acme.co',
+	},
+	{
+		id: 'aio-ghi789',
+		name: 'Aoi Kobayashi',
+		job: 'President',
+		email: 'kobayashi.aoi@acme.co',
+	},
+]
 
 export default function App() {
-    return (
-        <div className="App">
-            <h1>Joy of React exercises</h1>
-            <Whitespaces />
-            <Expressionslot />
-            <FriendlyGreeting name="Praveen" />
+	return (
+		<div className="App">
+			<h1>Joy of React exercises</h1>
+			<Whitespaces />
+			<Expressionslot />
+			<FriendlyGreeting name="Praveen" />
 
-            <RedButton content="Dont click" />
-            <ul>
-                <ContactCard name="Sunita" job="Electrical Engineer" email="sunita.kumar@acme.co" />
-                <ContactCard name="Raj" job="Computer Engineer" email="sunita.kumar@acme.co" />
-                <ContactCard name="Kumar" job="Mechanical Engineer" email="sunita.kumar@acme.co" />
-            </ul>
-            <MyButton status="cancel" > Cancel </MyButton>
-            <MyButton status="confirm"> Confirm </MyButton>
-        </div>
-    );
+			<RedButton content="Dont click" />
+
+			<MyButton status="cancel" > Cancel </MyButton>
+			<MyButton status="confirm"> Confirm </MyButton>
+
+			<ul>
+				{
+					data.map((contact) => (
+						<ContactCard name={contact.name} job={contact.job} email={contact.email} />
+					))
+				}
+			</ul>
+
+
+
+
+		</div>
+	);
 }
