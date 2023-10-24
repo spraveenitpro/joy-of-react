@@ -46,7 +46,7 @@ export default function App() {
             <ul>
                 {
                     data.map((contact) => {
-                        return <ContactCard name={contact.name} job={contact.job} email={contact.email} />
+                        return <ContactCard key={contact.id} name={contact.name} job={contact.job} email={contact.email} />
                     })
                 }
             </ul>
@@ -54,7 +54,7 @@ export default function App() {
             <ul>
                 {
                     data.map((contact) => (
-                        <ContactCard name={contact.name} job={contact.job} email={contact.email} />
+                        <ContactCard key={contact.id} name={contact.name} job={contact.job} email={contact.email} />
                     ))
                 }
             </ul>
