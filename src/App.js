@@ -8,6 +8,8 @@ import ContactCard from "./ContactCard";
 import MyButton from "./MyButton";
 import Avatar from "./Avatar";
 import ProfileCard from './ProfileCard';
+import Graph from "./Graph";
+import Counter from "./Counter";
 
 const userProfiles = [
 	{
@@ -153,12 +155,16 @@ export default function App() {
 				<ProfileCard
 					key={profile.id}
 					profile={profile}
-					
+
 				/>
 			))}
 
 
+			<Graph
+				from={0}
+				to={40} />
 
+			<Counter />
 
 		</main>
 	);
