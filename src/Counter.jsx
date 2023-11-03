@@ -6,7 +6,12 @@ function Counter() {
     return (
         <>
             <h1>Counter</h1>
-            <button onClick={() => setCount(count + 1)}>Value: {count}</button>
+            <button
+                onClick={() => {
+                    setCount(count + 1);
+                    console.log(count);
+
+                }}>Value: {count}</button>
         </>
     )
 }
