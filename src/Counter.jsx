@@ -2,7 +2,7 @@ import React from 'react'
 
 function Counter() {
 
-    const [count, setCount] = React.useState(0)
+    const [count, setCount] = React.useState(1)
     return (
         <>
             <h1>Counter</h1>
