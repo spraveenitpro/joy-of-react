@@ -13,7 +13,7 @@ function Country() {
 					<legend>Shipping info:</legend>
 					<label htmlFor="country">Country:</label>
 					<select required id="country" name="country" onChange={event => setCountry(event.target.value)} value={country}>
-						<option value="">--Please choose an option--</option>
+						<option value="">-Please choose an option--</option>
 						<optgroup label="Countries">
 							{
 								countryNames.map(([id, label]) => (
