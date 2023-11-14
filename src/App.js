@@ -12,6 +12,7 @@ import Graph from "./Graph";
 import Counter from "./Counter";
 import Form from "./Form";
 import Country from "./Country";
+import Gradient from "./Gradient";
 
 const userProfiles = [
     {
@@ -170,6 +171,7 @@ export default function App() {
             <Counter /> */}
             <Form />
             <Country />
+            <Gradient />
 
         </main>
     );
