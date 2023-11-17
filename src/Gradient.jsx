@@ -4,21 +4,30 @@ function Gradient() {
 
 	const colorStops = colors.join(", ");
 	const backgroundImage = `linear-gradient(${colorStops})`;
+    let poppedColors = [];
 
 	const addColor = () => {
 		if (colors.length >= 5) return;
 		const newArray = [...colors];
-		newArray.push("#FF0000");
-		setColors(newArray);
-		console.log("clicked!");
+
+        if ( poppedColors.length > 0 ) {
+
+            newArray = poppedColors.pop();
+            setColors(newArray);
+            console.log("clicked!");
+        } else {
+            newArray.push("#FFD500");
+            setColors(newArray);
+            console.log("clicked!");
+        }
 	};
 
 	const removeColor = () => {
 		if (colors.length <= 2) return;
 		const newArray = [...colors];
-		newArray.pop();
+		poppedColors = newArray.pop();
 		setColors(newArray);
-		console.log("clicked!");
+		console.log(poppedColors);
 	}
 
 	return (
